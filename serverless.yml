@@ -1,0 +1,14 @@
+org: martinjj80
+app: devops-poc
+service: devops-poc
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+
+functions:
+  api:
+    handler: handler.handler
+    events:
+      - httpApi: '*'
